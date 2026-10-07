@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="in.yograj.beans.Address" id="s1" name="s2 s3,s4 s5;s6">
+        <property name="rollno" value="101"/>
+        <property name="name" value="Amritanshu"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Address" name="stObj">
+        <property name="rollno" value="102" />
+        <property name="name" value="Shani"/>
+    </bean>
+
+</beans>
