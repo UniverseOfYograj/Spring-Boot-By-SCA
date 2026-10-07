@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                          http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="in.yograj.beans.Programmer" name="p1 p2">
+
+        <property name="Laptop" ref="lp"/>
+        <property name="name" value="Yograj"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Laptop" name="lp l">
+        <property name="brand" value="Asus"/>
+    </bean>
+</beans>
