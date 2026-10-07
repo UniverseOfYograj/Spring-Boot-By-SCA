@@ -1,0 +1,1 @@
+create table STUDENTS (roll int primary key, name varchar(27), percentage double )

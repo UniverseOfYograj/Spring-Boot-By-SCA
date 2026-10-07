@@ -1,0 +1,1 @@
+insert into students (roll, name,percentage) values(90,'Yograj',99.9)
