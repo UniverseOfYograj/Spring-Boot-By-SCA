@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="in.yograj.beans.Address" name="a1">
+        <property name="houseNo" value="108"/>
+        <property name="locality" value="Patia"/>
+        <property name="city" value="Bhubaneswar"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Customer" name="s1">
+        <constructor-arg type="int" value="101"/>
+        <constructor-arg type="String" value="yograj"/>
+        <constructor-arg type="in.yograj.beans.Address" ref="a1"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Customer" name="s2">
+        <constructor-arg value="102"/>
+        <constructor-arg value="Sachin"/>
+        <constructor-arg >
+            <bean class="in.yograj.beans.Address" name="a2">
+                <property name="houseNo" value="18"/>
+                <property name="locality" value="Babra Ashram"/>
+                <property name="city" value="Satna"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="in.yograj.beans.Address" id="s1">
+        <constructor-arg value="101" type="int"/>
+        <constructor-arg value="Yograj" type="String"/>
+
+
+    </bean>
+
+    <bean name="s2" class="in.yograj.beans.Address">
+        <constructor-arg value="Sachin" type="String"/>
+        <constructor-arg value="102" type="int"/>
+    </bean>
+
+    <bean name="s3" class="in.yograj.beans.Address">
+        <constructor-arg value="Vidur"/>
+        <constructor-arg value="103" type="int"/>
+
+    </bean>
+
+    <bean name="s4" class="in.yograj.beans.Address">
+
+        <constructor-arg index="1" value="104" type="int"/>
+        <constructor-arg index="0" value="Arti" type="String"/>
+    </bean>
+
+
+    <bean class="in.yograj.beans.Address" name="s5">
+        <constructor-arg index="1" value="105" type="int"/>
+        <constructor-arg index="0" value="Sumitra"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Address" name="s6">
+        <constructor-arg  value="105" type="int"/>
+        <constructor-arg  value="Rama" type="String"/>
+    </bean>
+</beans>

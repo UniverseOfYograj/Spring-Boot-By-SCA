@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="in.yograj.beans.Address" id="s1">
+        <property name="name" value="Yograj"/>
+        <property name="rollno" value="101"/>
+        <property name="subjects">
+            <array>
+                <value>Physics</value>
+                <value>Chemistry</value>
+                <value>Mathematics</value>
+                <value>Sanskritam</value>
+            </array>
+        </property>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,21 @@
+# IntelliJ IDEA
+.idea/
+
+# Compiled / generated output
+out/
+target/
+build/
+bin/
+*.class
+
+# Eclipse
+.settings/
+.classpath
+.project
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

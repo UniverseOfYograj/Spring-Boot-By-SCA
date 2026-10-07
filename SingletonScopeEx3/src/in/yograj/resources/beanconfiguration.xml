@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="in.yograj.beans.Customer" id="s1" scope="singleton">
+        <property name="name" value="Yograj"/>
+        <property name="rollno" value="101"/>
+        <property name="address" ref="addrObj"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Address" name="addr" scope="prototype">
+        <property name="houseNo" value="117 9A"/>
+        <property name="city" value="Satna"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Address" name="addrObj" scope="prototype">
+        <constructor-arg value="207 9C"/>
+        <constructor-arg value="Satna"/>
+    </bean>
+
+
+
+
+</beans>

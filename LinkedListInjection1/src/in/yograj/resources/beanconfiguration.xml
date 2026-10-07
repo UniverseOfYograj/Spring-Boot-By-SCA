@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="in.yograj.beans.Employee" name="emp1">
+        <property name="empId" value="101"/>
+        <property name="empName" value="Deepak"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Employee" name="emp2">
+        <property name="empId" value="102"/>
+        <property name="EmpName" value="Amit"/>
+    </bean>
+    <bean class="in.yograj.beans.Company" name="company">
+        <property name="compName" value="Amazon"/>
+        <property name="employees">
+
+            <bean class="org.springframework.beans.factory.config.ListFactoryBean">
+                <property name="targetListClass">
+                    <value>java.util.LinkedList</value>
+                </property>
+                <property name="sourceList">
+                    <list>
+                        <ref bean="emp1"/>
+                        <ref bean="emp2"/>
+                    </list>
+                </property>
+
+            </bean>
+        </property>
+    </bean>
+</beans>

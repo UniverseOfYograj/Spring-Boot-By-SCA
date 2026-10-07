@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="in.yograj.beans.Customer" id="s1">
+        <property name="name" value="Yograj"/>
+        <property name="rollno" value="101"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Customer" id="s2" >
+        <property name="name" value="Amit"/>
+        <property name="rollno" value="102"/>
+    </bean>
+    <bean class="in.yograj.beans.Account" name="account">
+        <property name="accountId" value="101"/>
+        <property name="balance" value="90000.0"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Customer" id="s3" autowire="byName">
+        <property name="name" value="Anant"/>
+        <property name="rollno" value="103"/>
+
+    </bean>
+
+</beans>

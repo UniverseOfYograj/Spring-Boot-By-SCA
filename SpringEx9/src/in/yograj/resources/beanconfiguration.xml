@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                          http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="in.yograj.beans.Programmer" name="p1 p2">
+
+        <property name="computer" ref="lp"/>
+        <property name="name" value="Yograj"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Programmer" name="p pObj">
+        <property name="computer" ref="desk"/>
+        <property name="name" value="Hanuman"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Laptop" name="lp l">
+        <property name="brand" value="Asus"/>
+    </bean>
+
+    <bean class="in.yograj.beans.Programmer" name="p3">
+        <property name="name" value="Divyanka"/>
+        <property name="computer" >
+        <bean class="in.yograj.beans.Laptop" name="lp l">
+            <property name="brand" value="MacBook"/>
+        </bean>
+        </property>
+    </bean>
+
+    <bean class="in.yograj.beans.Desktop" name="desk d">
+        <property name="brand" value="Samsung"/>
+    </bean>
+
+</beans>
